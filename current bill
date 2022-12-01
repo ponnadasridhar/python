@@ -1,0 +1,16 @@
+no = int(input('enter servey no.:'))
+print('house hold useage')
+uns = int(input('enter the units:'))
+if uns>0:
+    uns = uns-30
+    bill=10*2.50
+if uns>0:
+    uns=uns-75
+    bill = bill+10*3.0
+if uns>0:
+    uns=uns-125
+    bill=bill+10*4.50
+if uns>0:
+    uns = uns -225
+    bill=bill+10*6.0
+print('bill to be paid:',bill)
