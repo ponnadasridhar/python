@@ -1,0 +1,34 @@
+cname=input('name of custmer name:')
+cphone=int(input('enter the custmer number:'))
+caddress=input('address:')
+print('--------------------------------')
+print('*******WELCOME TO SMART*********')
+print('groceries list')
+print('1.besan floor')
+print('2.masoor dal')
+print('3.midha pindi')
+print('4.sena pindhi')
+print('5.sena papu')
+mp=int(input('enter the price of midha pindhi'))
+bf=int(input('enter the price of besan floor'))
+md=int(input('enter the price of midha pindi'))
+spi=int(input('enter the price of sena pindi'))
+spa=int(input('enter the price of sena papu'))
+bill=mp+bf+md+spi+spa
+if bill>3000:
+    tax=bill*5/100
+elif bill>2000:
+    tax=bill*7/100
+elif bill>1000:
+    tax=bill*10/100
+elif bill>500:
+    tax=bill*15/100
+else:
+    tax=100
+bill=tax+bill
+print('----------------------------------')
+print('custmer name:',cname)
+print('custmer number',cphone)
+print('custmer address',caddress)
+print('cgst+sgst:',tax)
+print('bill:',bill)
