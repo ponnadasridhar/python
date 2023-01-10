@@ -1,0 +1,12 @@
+def swap_case(s):
+    e=''
+    d=''
+    for i in s:
+        if i.isupper():
+            e=i.lower()
+        else:
+            e=i.upper()
+        d=d+e
+    return d
+
+if _name_ == '_main_':
