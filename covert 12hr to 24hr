@@ -1,0 +1,54 @@
+'''
+n=input()
+m=len(n)
+l=[]
+for letter in n:
+    l.append(letter)
+print(l)
+for i in range(0,m):
+    for j in range(0,i+1):
+        print(l[j],end=" ")
+    print('\n')
+    '''
+# Python3 program to convert 12
+# hour to 24 hour format
+def print24(s):
+ 
+    # Get hours
+    h1 = ord(s[1]) - ord('0')
+    h2 = ord(s[0]) - ord('0')
+    hh = (h2 * 10 + h1 % 10)
+  
+    # If time is in "AM"
+    if (s[8] == 'A'):
+        if (hh == 12):
+            print('00', end = '')
+             
+            for i in range(2, 8):
+                print(s[i], end = '')
+ 
+        else:
+            for i in range(0, 8):
+                print(s[i], end = '')
+  
+    # If time is in "PM"
+    else:
+        if (hh == 12):
+            print("12", end = '')
+             
+            for i in range(2, 8):
+                print(s[i], end = '')
+         
+        else:
+            hh = hh + 12;
+            print(hh, end = '')
+             
+            for i in range(2, 8):
+                print(s[i], end = '')
+             
+# Driver code          
+if __name__=="__main__":
+ 
+   s = "07:05:45PM"
+    
+   print24(s)
